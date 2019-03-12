@@ -1,7 +1,7 @@
 
 local classFunc = class
 
-if type(classFunc) ~= "function" then
+if not classFunc then
 	classFunc = function()
 		local classType = {}
 		setmetatable(classType, classType)
