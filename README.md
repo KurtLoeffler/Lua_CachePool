@@ -33,4 +33,4 @@ pool:reset()
 ```
 
 ## Requirements
-This library is intended for use with the **middleclass** OOP library, with a global `class()` function declared. If `class()` is not declared, it will still work though.
+This library is intended for use with the **middleclass** OOP library, with a global `class()` function or callable table declared. If `class()` is not declared, it will still work though.
