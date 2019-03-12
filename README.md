@@ -31,3 +31,6 @@ transform.position:add(deltaPosition)
 -- at the of the game frame, reset internal counters so pooled objects can be reused next frame
 pool:reset()
 ```
+
+## Requirements
+This library is intended for use with the **middleclass** OOP library, with a global `class()` function declared. If `class()` is not declared, it will still work though.
