@@ -1,4 +1,21 @@
-local CachePool = class("CachePool")
+
+local classFunc = class
+
+if type(classFunc) ~= "function" then
+	classFunc = function()
+		local classType = {}
+		setmetatable(classType, classType)
+		classType.__index = classType
+		function classType:__call(...)
+			local instance = setmetatable({}, self)
+			instance:initialize(...)
+			return instance
+		end
+		return classType
+	end
+end
+
+local CachePool = classFunc("CachePool")
 
 function CachePool:initialize()
 	self.pools = {}
