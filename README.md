@@ -33,4 +33,4 @@ pool:reset()
 ```
 
 ## Requirements
-This library is intended for use with the **middleclass** OOP library, with a global `class()` function or callable table declared. If `class()` is not declared, it will still work though.
+There are no strict dependencies, but if **middleclass** is used with a global `class()` defined at the time of import, CachePool will be a **middleclass** type, otherwise it will use a light weight class-like wrapper.
