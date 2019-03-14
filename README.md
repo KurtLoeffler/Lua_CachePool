@@ -13,10 +13,10 @@ pool = CachePool()
 -- first argument is the function name which will be prefixed with "get" (eg. pool:getVector3())
 -- second argument is a function that is called to create new instances of the object to fill the pool when needed
 -- third argument is a function that is called on each object that is returned from the pool:get***(), in this case initializing them to default values
-pool:newTypePool("Vector3", function() return Vector3() end, function(v) v:set(Vector3.default) end)
-pool:newTypePool("Vector4", function() return Vector4() end, function(v) v:set(Vector4.default) end)
-pool:newTypePool("Quat", function() return Quat() end, function(v) v:set(Quat.default) end)
-pool:newTypePool("Matrix4", function() return Matrix4() end, function(v) v:set(Matrix4.default) end)
+pool:newPool("Vector3", function() return Vector3() end, function(v) v:set(Vector3.default) end)
+pool:newPool("Vector4", function() return Vector4() end, function(v) v:set(Vector4.default) end)
+pool:newPool("Quat", function() return Quat() end, function(v) v:set(Quat.default) end)
+pool:newPool("Matrix4", function() return Matrix4() end, function(v) v:set(Matrix4.default) end)
 
 -- game loop
 ...
