@@ -27,7 +27,7 @@ function CachePool:reset()
 	end
 end
 
-function CachePool:newTypePool(name, newConstructor, initializer)
+function CachePool:newPool(name, newConstructor, initializer)
 	local typePool = {
 		pool = {},
 		count = 0
